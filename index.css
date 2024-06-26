@@ -189,3 +189,24 @@ img {
 .t-nav em {
     font-style: normal;
 }
+
+    .t-nav a:hover span:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-right: 5px solid #1a477f;
+        position: absolute;
+        left: -5px
+    }
+ .t-nav a:hover span {
+        width: auto;
+        overflow: visible;
+        background-color: #1a477f;
+        opacity: 1;
+        color: #fff;
+        padding: 0 12px;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #00000026
+    }
