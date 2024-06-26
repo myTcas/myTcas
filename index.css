@@ -48,12 +48,12 @@ html {
 
 @media (min-width: 1024px) {
     header {
-        right: unset;
+        right: unset !important;
         width: 70px;
-        position: fixed;
+        position: fixed !important;
         bottom: 0;
-        height: unset;
-        background-color: #fff;
+        height: unset !important;
+        background-color: #fff !important;
     }
 }
 header {
@@ -71,8 +71,8 @@ header {
 
 @media (max-width: 1023px) {
     #head {
-        overflow: hidden;
-        transition: .3s ease-in-out;
+        overflow: hidden !important;
+        transition: .3s ease-in-out !important;
     }
 }
 
@@ -88,7 +88,7 @@ nav, button, label, legend {
 
 @media (min-width: 1024px) {
     .t-nav ul {
-        display: block;
+        display: block !important;
     }
 }
 .t-nav ul {
@@ -111,17 +111,17 @@ ol, ul {
 
 @media (min-width: 1024px) {
     .t-nav li {
-        height: auto;
-        box-shadow: none;
-        border-bottom: 1px solid #e6e6e6;
+        height: auto !important;
+        box-shadow: none !important;
+        border-bottom: 1px solid #e6e6e6 !important;
     }
 }
 
 @media (min-width: 1024px) {
     .t-nav li {
-        height: auto;
-        box-shadow: none;
-        border-bottom: 1px solid #e6e6e6;
+        height: auto !important;
+        box-shadow: none !important;
+        border-bottom: 1px solid #e6e6e6 !important;
     }
 }
 .t-nav li {
@@ -141,9 +141,9 @@ ol, ul {
 
 @media (max-width: 1023px) {
     .t-nav .sub {
-        height: 0;
-        overflow: hidden;
-        transition: .3s ease-in-out;
+        height: 0 !important;
+        overflow: hidden !important;
+        transition: .3s ease-in-out !important;
     }
 }
 
@@ -161,7 +161,7 @@ img {
 
 @media (min-width: 380px) {
     .t-nav span {
-        font-size: 12px;
+        font-size: 12px !important;
     }
 }
 .t-nav span {
@@ -173,7 +173,7 @@ img {
 
 @media (max-width: 1023px) {
     .t-nav svg {
-        transition: .3s ease-in-out;
+        transition: .3s ease-in-out !important;
     }
 }
 .t-nav svg {
