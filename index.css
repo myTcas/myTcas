@@ -1,12 +1,12 @@
 @media (min-width: 100px) {
         .t-nav a:hover span:before {
-        content: ;
-        width: ;
-        height: ;
-        border-top: ;
-        border-bottom: ;
-        border-right: ;
-        position: ;
-        left: ;
+        content: unset;
+        width: 0 !important;
+        height: 0 !important;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        border-right: 0 !important;
+        position: unset;
+        left: unset;
     }
 }
