@@ -190,6 +190,24 @@ img {
     font-style: normal;
 }
 
+
+    .t-nav a {
+        position: relative;
+        display: block;
+        padding: 10px 6px
+    }
+
+    .t-nav a:hover span {
+        width: auto;
+        overflow: visible;
+        background-color: #1a477f;
+        opacity: 1;
+        color: #fff;
+        padding: 0 12px;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #00000026
+    }
+
     .t-nav a:hover span:before {
         content: "";
         width: 0;
@@ -200,13 +218,102 @@ img {
         position: absolute;
         left: -5px
     }
- .t-nav a:hover span {
-        width: auto;
-        overflow: visible;
-        background-color: #1a477f;
-        opacity: 1;
-        color: #fff;
-        padding: 0 12px;
-        border-radius: 3px;
-        box-shadow: 0 0 3px #00000026
+
+    .t-nav a.home img {
+        width: 40px;
+        height: 48px
     }
+
+    .t-nav li {
+        height: auto;
+        box-shadow: none;
+        border-bottom: 1px solid #e6e6e6
+    }
+
+    .t-nav li:first-child a {
+        padding: 6px
+    }
+
+    .t-nav li:first-child span {
+        top: 18px
+    }
+
+    .t-nav svg {
+        width: 24px
+    }
+
+    .t-nav .active svg {
+        width: 32px;
+        height: 32px;
+        padding: 6px
+    }
+}
+
+.tt-sec {
+    color: var(--blue)
+}
+
+.tt-sec .wrap {
+    padding: 30px 20px 20px
+}
+
+.tt-sec p {
+    margin: 0
+}
+
+.tt-sec.full .wrap {
+    margin-bottom: var(--s-space)
+}
+
+.tt-sec h1 {
+    font-weight: 700;
+    z-index: 2;
+    position: relative;
+    margin: 10px 0
+}
+
+@media(min-width: 768px) {
+    .tt-sec .wrap {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 40px 20px
+    }
+
+    .tt-sec .wrap.full .wrap {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(min-width: 1024px) {
+    .tt-sec.small .logo {
+        width:140px
+    }
+
+    .tt-sec.small .wrap {
+        padding: 60px 40px 20px
+    }
+
+    .tt-sec .logo {
+        width: 180px;
+        margin-top: 30px
+    }
+
+    .tt-sec h1 {
+        margin: 16px 0 10px
+    }
+
+    .tt-sec .wrap {
+        padding: 60px 40px 30px
+    }
+
+    .tt-sec .banner {
+        position: relative
+    }
+
+    .tt-sec .banner img {
+        max-width: 300px;
+        position: fixed;
+        top: 0;
+        left: calc(50% + 160px)
+    }
+}
