@@ -313,15 +313,6 @@ label {
     margin: 0 2px;
 }
    
-input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
-    font-family: "kvl", sans-serif;
-    border: 2px solid #d5d5d7;
-    transition: .3s ease;
-    background-size: 30px 20px;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: right center;
-}
 button, select, input, textarea {
     font-size: 1.125em;
     padding: .474em .5em .36em;
@@ -381,6 +372,26 @@ button, select, input, textarea {
     margin-right: -10px;
     flex-wrap: wrap;
     justify-content: center;
+}
+.t-row select, .t-row input:not([type=checkbox]):not([type=radio]) {
+    width: 100%;
+}
+        
+input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
+    font-family: "kvl", sans-serif;
+    border: 2px solid #d5d5d7;
+    transition: .3s ease;
+    background-size: 30px 20px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+button, select, input, textarea {
+    font-size: 1.125em;
+    padding: .474em .5em .36em;
+    line-height: 1.4;
+    border-radius: 3px;
 }
         </style>
   </head>
