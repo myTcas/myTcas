@@ -1,32 +1,182 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
     <meta charset="utf-8">
     <link rel="icon" type="image/svg+xml" href="https://mytcas.com/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="ระบบการคัดเลือกบุคคลเข้าศึกษาต่อในระดับมหาวิทยาลัย ปีการศึกษา 2567">
-    <title>ลงทะเบียน • เข้าสู่ระบบ</title>
+    <title>TCAS67 • ระบบการคัดเลือกบุคคลเข้าศึกษาต่อในระดับมหาวิทยาลัย ปีการศึกษา 2567</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="courses.CzjDGjDm.css">
-    <link rel="stylesheet" href="index.UgyIeBMx.css">
-    <link rel="stylesheet" href="mobile.css">
-    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="https://mytcas.com/_astro/courses.CzjDGjDm.css">
+    <link rel="stylesheet" href="https://mytcas.com/_astro/index.UgyIeBMx.css">
     <style>
-@media (min-width: 100px) {
-        .t-nav a:hover span:before {
-        content: unset;
-        width: 0 !important;
-        height: 0 !important;
-        border-top: 0 !important;
-        border-bottom: 0 !important;
-        border-right: 0 !important;
-        position: unset;
-        left: unset;
-    }
-}
+            .input-search {
+                width: 100%;
+                max-width: 400px;
+                position: relative
+            }
 
-    </style>
-</head>
+            .input-search #search {
+                width: 100%;
+                padding: 8px 30px 8px 12px
+            }
+
+            .input-search #search:focus-visible {
+                border-color: #fff;
+                outline: 3px solid var(--teal)
+            }
+
+            .input-search .i-search {
+                position: absolute;
+                top: 13px;
+                right: 12px;
+                color: var(--blue)
+            }
+
+            .t-result {
+                position: relative;
+                z-index: 10;
+                filter: drop-shadow(var(--s-shadow-2));
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                transition: transform .4s ease-in-out,opacity .3s linear,visibility 0s linear
+            }
+
+            .t-result.active {
+                visibility: visible;
+                height: auto;
+                opacity: 1;
+                overflow: unset;
+                transform: translateY(-20px);
+                transition-timing-function: cubic-bezier(0,.2,.25,1),linear,linear;
+                margin-bottom: -20px
+            }
+
+            .t-result.active:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: calc(50% - 5px);
+                top: -8px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 10px 8px 10px;
+                border-color: transparent transparent var(--teal) transparent;
+                z-index: 2
+            }
+
+            .t-result h2 {
+                margin: 0;
+                padding: 8px var(--s-box);
+                background-color: var(--teal);
+                color: #fff;
+                width: 100%;
+                font-size: 1.125em;
+                border-radius: 5px 5px 0 0;
+                padding: 12px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between
+            }
+
+            .t-result h2 b {
+                font-size: 1rem;
+                font-weight: 400
+            }
+
+            @media (min-width: 768px) {
+                .t-result {
+                    max-width:750px;
+                    transform: translate(-50%)
+                }
+
+                .t-result.active {
+                    left: 50%;
+                    transform: translate(-50%,-30px)
+                }
+
+                .t-result.-left {
+                    transform: translate(0)
+                }
+
+                .t-result.-left.active {
+                    left: 0;
+                    transform: translateY(-30px)
+                }
+
+                .t-result.-left.active:after {
+                    left: 30px
+                }
+            }
+
+            .t-programs {
+                padding: 0;
+                margin: 0;
+                background-color: #fff;
+                border-radius: 0 0 5px 5px
+            }
+
+            .t-programs li {
+                list-style: none;
+                display: block;
+                padding: 16px;
+                position: relative
+            }
+
+            .t-programs li:nth-child(2n) {
+                background-color: #f3f8fd
+            }
+
+            .t-programs li:last-child {
+                border-radius: 0 0 5px 5px
+            }
+
+            .t-programs img {
+                position: absolute;
+                left: 16px;
+                top: 22px
+            }
+
+            .t-programs a {
+                display: block;
+                color: var(--blue);
+                line-height: 1.4;
+                padding-left: 64px
+            }
+
+            .t-programs a>b,.t-programs a>span {
+                display: block;
+                font-size: .9em;
+                font-weight: 400
+            }
+
+            .t-programs a strong {
+                color: #ff6b00
+            }
+
+            .t-programs h3 {
+                font-size: 1em;
+                margin: 0 0 4px;
+                font-weight: 700
+            }
+
+            .search-hide {
+                transition: .4s ease-in-out;
+                padding-top: 12px
+            }
+
+            .search-hide .i-university {
+                width: 20px
+            }
+
+            .search-hide.active {
+                opacity: 0
+            }
+      .round-1 , .round-2 , .round-4{display:none;}
+        </style>
+  </head>
 <body>
     <div id="root">
         <div id="tcas">
