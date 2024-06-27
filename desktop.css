@@ -23,6 +23,12 @@ h1 {
   .site-nav ul {
     display: block;
   }
+  
+    .site-nav li {
+        height: auto;
+        box-shadow: none;
+        border-bottom: 1px solid #e6e6e6;
+    }
 }
 // NAV
 .site-nav {
