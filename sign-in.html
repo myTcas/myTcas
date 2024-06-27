@@ -312,10 +312,7 @@ label {
     color: #ea0c42;
     margin: 0 2px;
 }
-        
-.t-row select, .t-row input:not([type=checkbox]):not([type=radio]) {
-    width: 100%;
-}
+   
 input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
     font-family: "kvl", sans-serif;
     border: 2px solid #d5d5d7;
@@ -356,8 +353,6 @@ button, select, input, textarea {
 .t-form .action .btn-main {
     width: 100%;
     max-width: 350px;
-    margin-right: 10px;
-    margin-left: 10px;
 }
 .btn-main.disabled {
 /*     background-image: linear-gradient(to right, #606676, #68728c); */
@@ -378,6 +373,14 @@ button, select, input, textarea {
     max-width: 760px;
     margin: 0 auto;
     padding: var(--s-box) 16px;
+}
+.t-row {
+    display: flex;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
         </style>
   </head>
