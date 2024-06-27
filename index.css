@@ -10,3 +10,8 @@
         left: unset;
     }
 }
+
+::selection {
+    background-color: #ffc636;
+    color: #000;
+}
