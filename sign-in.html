@@ -10,6 +10,27 @@
     <link rel="stylesheet" href="https://mytcas.com/_astro/index.UgyIeBMx.css">
     <link rel="stylesheet" href="https://student.mytcas.com/assets/scss/mobile.scss">
     <style>
+        
+:root {
+    --s-border: #d8d6d0;
+    --s-text: #191e23;
+    --s-space: 16px;
+    --s-gap: 16px;
+    --s-box: 16px;
+    --s-heading: kvl, sans-serif;
+    --s-heading-weight: 500;
+    --s-heading-line-height: 1.3;
+    --s-body: tt, sans-serif;
+    --s-body-font-size: 16px;
+    --s-body-line-height: 1.8;
+}
+.site-body h1 {
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+}
             .input-search {
                 width: 100%;
                 max-width: 400px;
@@ -229,6 +250,122 @@ body {
     text-align: center;
     line-height: 0;
 }
+        
+.text-center {
+    text-align: center;
+}
+        
+.t-box.-info {
+    color: #033470;
+    border: 2px solid #033470;
+}
+@media (min-width: 768px) {
+    .t-box.-half {
+        width: 50%;
+    }
+}
+.t-box {
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .15);
+    padding: var(--s-box);
+    border-radius: 3px;
+    margin: 0 auto var(--s-space);
+}
+        
+.t-box.-info b, .t-box.-info strong {
+    color: #00a0a9;
+}
+        
+.t-row {
+    display: flex;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+        
+@media (min-width: 768px) {
+    .t-row .col {
+        width: 50%;
+    }
+}
+.t-row .col {
+    width: 100%;
+    position: relative;
+}
+.t-row>div {
+    padding: 0 10px 20px;
+}
+        
+.t-form label {
+    display: flex;
+    width: 100%;
+}
+label {
+    font-family: var(--s-heading);
+    font-weight: var(--s-heading-weight);
+    font-size: 1.125em;
+}
+  .t-row .required>label:not(.has-meta):not(.no-x):after, .t-row .required>.has-meta>span:first-of-type:after {
+    content: "*";
+    color: #ea0c42;
+    margin: 0 2px;
+}
+        
+.t-row select, .t-row input:not([type=checkbox]):not([type=radio]) {
+    width: 100%;
+}
+input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
+    font-family: "kvl", sans-serif;
+    border: 2px solid #d5d5d7;
+    transition: .3s ease;
+    background-size: 30px 20px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+button, select, input, textarea {
+    font-size: 1.125em;
+    padding: .474em .5em .36em;
+    line-height: 1.4;
+    border-radius: 3px;
+}
+        
+@media (min-width: 768px) {
+    .t-form .action {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.t-form .action {
+    text-align: center;
+    margin-bottom: var(--s-space);
+}
+@media (min-width: 1024px) {
+    :root {
+        --s-space: 30px;
+    }
+}
+        
+@media (min-width: 768px) {
+    .t-form .action .btn-main {
+        width: 50%;
+    }
+}
+.t-form .action .btn-main {
+    width: 100%;
+    max-width: 350px;
+}
+.btn-main.disabled {
+/*     background-image: linear-gradient(to right, #606676, #68728c); */
+    cursor: not-allowed;
+}
+@media (min-width: 1024px) {
+    .btn-main {
+        font-size: 1.125em;
+    }
+}
         </style>
   </head>
 <body>
@@ -264,6 +401,14 @@ body {
             <main class="site-body">
                 <div class="t-form">
                     <h1>ลงทะเบียน • เข้าสู่ระบบ</h1>
+                    <p class="text-center">
+                        <img src="https://student.mytcas.com/assets/img/thai_id.svg" width="213" height="122" alt="Thai ID Card">
+                    </p>
+                    <div class="t-box -info -half">เข้าระบบลงทะเบียนด้วย 
+                        <b>เลขประจำตัวประชาชน 13 หลัก</b> หากไม่มี ให้ใช้ 
+                        <b>G Number</b> หรือ
+                        <b> Passport Number</b>
+                    </div>
                     <div class="t-row">
                         <div class="col required">
                             <label class="has-meta"><span>เลขประจำตัว</span></label>
