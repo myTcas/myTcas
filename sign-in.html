@@ -12,8 +12,20 @@
     <link rel="stylesheet" href="mobile.css">
     <link rel="stylesheet" href="desktop.css">
     <style>
+@media (min-width: 100px) {
+        .t-nav a:hover span:before {
+        content: unset;
+        width: 0 !important;
+        height: 0 !important;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        border-right: 0 !important;
+        position: unset;
+        left: unset;
+    }
+}
 
-        </style>
+    </style>
 </head>
 <body>
     <div id="root">
