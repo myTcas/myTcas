@@ -10,13 +10,15 @@ h1 {
   top: 16px;
   right: 16px;
 }
-.site-header {
-  right: unset;
-  width: 70px;
-  position: fixed;
-  bottom: 0;
-  height: unset;
-  background-color: #fff;
+@media(min-width: 1024px) {
+  .site-header {
+    right: unset;
+    width: 70px;
+    position: fixed;
+    bottom: 0;
+    height: unset;
+    background-color: #fff;
+  }
 }
 // NAV
 .site-nav {
