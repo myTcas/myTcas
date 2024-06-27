@@ -19,6 +19,10 @@ h1 {
     height: unset;
     background-color: #fff;
   }
+
+  .site-nav ul {
+    display: block;
+  }
 }
 // NAV
 .site-nav {
