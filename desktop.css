@@ -53,6 +53,7 @@ h1 {
 }
 }
 a:hover span::before {
+  display: block;
           content: '';
           width: 0;
           height: 0;
@@ -62,6 +63,9 @@ a:hover span::before {
           position: absolute;
           left: -5px;
         }
+a:hover span {
+  display: block;
+}
 a span {
         width: auto;
         overflow: visible;
@@ -72,6 +76,10 @@ a span {
         border-radius: 3px;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
 }
+a {
+    position: relative;
+    display: block;
+    padding: 10px 6px;
 // NAV
 .site-nav {
   ul {
