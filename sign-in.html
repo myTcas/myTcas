@@ -107,7 +107,11 @@
                 font-size: 1rem;
                 font-weight: 400
             }
-
+        @media (min-width: 840px) {
+.t-row select, .t-row input:not([type=checkbox]):not([type=radio]) {
+    width: 100%;
+}
+        }
             @media (min-width: 768px) {
                 .t-result {
                     max-width:750px;
@@ -377,7 +381,7 @@ button, select, input, textarea {
     justify-content: center;
 }
 .t-row select, .t-row input:not([type=checkbox]):not([type=radio]) {
-    width: 100%;
+    width:50%;
 }
         
 input[type=text], input[type=date], input[type=number], input[type=tel], input[type=email], input[type=file], input[type=password], textarea {
