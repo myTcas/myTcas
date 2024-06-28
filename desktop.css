@@ -18,6 +18,12 @@
         height: 32px;
         padding: 6px;
     }
+    .site-nav li:first-child a {
+        padding: 6px;
+    }
+    .site-nav li:first-child span {
+        top: 18px;
+    }
     .site-nav li.m-home img {
         width: 40px;
         height: 48px;
