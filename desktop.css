@@ -21,6 +21,13 @@
     .site-nav li:first-child a {
         padding: 6px;
     }
+      
+
+      .t-form .action .btn-main {
+          width: 100%;
+          max-width: 350px;
+      }
+
     .site-nav li:first-child span {
         top: 18px;
     }
