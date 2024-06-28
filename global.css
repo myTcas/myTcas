@@ -307,7 +307,7 @@ textarea {
 }
 .btn-main {
   background-color: $blue;
-  background-image: linear-gradient(to right, #00a5ad, #00bad3, #006db6, #1598f0);
+  background-image: linear-gradient(to right, #00a5ad, #00bad3, #006db6, #1598f0)!important;
   background-size: 300% 100%;
   color: #fff;
   border: none;
@@ -373,7 +373,7 @@ textarea {
   transition: all 0.4s ease-in-out;
   gap: 0;
   &.disabled {
-    background-image: linear-gradient(to right, #737986, #828897);
+    background-image: linear-gradient(to right, #737986, #828897)!important;
     cursor: not-allowed;
     &:hover {
       transform: none;
