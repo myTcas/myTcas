@@ -225,7 +225,13 @@ body {
         background-position: top right;
     }
 }
-  
+  @media (max-width: 1023px) {
+.t-row .col {
+    width: 100%;
+    position: relative;
+    display: unset;
+}
+  }
 .t-nav ul {
     padding: 0;
     margin: 0;
@@ -341,6 +347,9 @@ button, select, input, textarea {
     width: 100%;
 }
 @media (min-width: 1024px) {
+    .t-row .col {
+        width: 50%;
+    }
     :root {
         --s-space: 30px;
     }
