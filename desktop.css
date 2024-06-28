@@ -1,5 +1,8 @@
 
 @media (min-width: 1024px) {
+      .site-nav ul {
+        display: block;
+    }
 @import 'var';
 h1 {
   font-size: 2em;
