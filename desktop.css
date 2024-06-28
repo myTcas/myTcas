@@ -46,8 +46,8 @@ h1 {
     position: relative;
     display: block;
     padding: 10px 6px;
-    &:hover {
-      span {
+  }
+    a:hover span {
         width: auto;
         overflow: visible;
         background-color: #1a477f;
@@ -56,7 +56,8 @@ h1 {
         padding: 0 12px;
         border-radius: 3px;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-        &::before {
+    }
+     a:hover span::before {
           content: '';
           width: 0;
           height: 0;
@@ -66,9 +67,6 @@ h1 {
           position: absolute;
           left: -5px;
         }
-      }
-    }
-  }
   li {
     height: auto;
     box-shadow: none;
